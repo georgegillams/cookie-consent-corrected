@@ -109,6 +109,7 @@
   &__image {
     display: inline-block;
     width: 70%;
+    max-width: 20rem;
     margin-bottom: 2rem;
 
     @include bpk-breakpoint-tablet {

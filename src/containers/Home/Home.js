@@ -68,20 +68,25 @@ export default class Home extends Component {
         </div>
         <Section>
           Cookie consent on the web is a little broken. In the EU, websites that
-          wish to use cookies must, by law, obtain consent from users first.
+          wish to use cookies must (by law) obtain consent from users first.
           Browsers leave the website entirely responsible for obtaining this
           consent and abiding by it. As a result, websites often look like this
           when first visited:
           <br />
-          <FadingLazyLoadedImage
-            className={getClassName('pages__image')}
-            altText="Existing system screenshot"
-            width={1102}
-            height={2146}
-            src="https://www.dropbox.com/s/3qnc85lx5d2h1mi/Export_current.png?dl=1"
-          />
           <br />
-          There are a number of issues with this. To name a few:
+          <div className={getClassName('pages__container--centered')}>
+            <FadingLazyLoadedImage
+              className={getClassName('pages__image')}
+              altText="Existing system screenshot"
+              width={1102}
+              height={2146}
+              src="https://i.imgur.com/WlfJetM.png"
+            />
+          </div>
+          <br />
+          This is an extreme example, and some websites actually take their
+          responsibility very seriously. Many choose not to, however, and getting
+          it right is not always trivial.
           <br />- Creating a compliant cookie “banner” can be expensive -
           especially for charities and non-profits.
           <br />- Cookie “banners” are often disruptive.
@@ -94,6 +99,13 @@ export default class Home extends Component {
           <br />- And most importantly, they don’t actually enforce anything! A
           website could choose not to honour your preferences, and ask the
           browser to store cookies regardless.
+          <br />
+          <br />I believe that people should have complete, accessible control
+          over their cookies whatever website they visit, and I believe that
+          right should extend beyond the EU. I, therefore, wish to propose a way
+          of achieving this without relying on individual websites and
+          legislation alone to protect users' privacy.
+          <br />
         </Section>
         <Section name="A better way">
           I wish to propose a new standard by which users can have better
@@ -101,21 +113,25 @@ export default class Home extends Component {
           websites to inform browsers of their cookie requirements. The browser
           will then prompt the user for permission.
           <br />
-          <FadingLazyLoadedImage
-            className={getClassName('pages__image')}
-            altText="Proposed mechanism screenshot"
-            width={1102}
-            height={2170}
-            src="https://www.dropbox.com/s/j3zxg88ptg5pxeq/Export_proposed.png?dl=1"
-          />
+          <br />
+          <div className={getClassName('pages__container--centered')}>
+            <FadingLazyLoadedImage
+              className={getClassName('pages__image')}
+              altText="Proposed mechanism screenshot"
+              width={1102}
+              height={2170}
+              src="https://i.imgur.com/rzVn7ve.png"
+            />
+          </div>
           <br />
           The advantages of this over the existing system are:
           <br />- Consistent UI. As the browser is asking every time, the
           language, options and appearance will always be the same.
-          <br />- No conflict of interest - the browser will put you in control,
-          as they have nothing to gain from dark-design-patterns.
+          <br />- No conflict of interest - the browser will put you in control
+          as they have nothing to gain from dark-patterns or trickery.
           <br />- The browser will actually have the control to enforce your
-          preferences. A website can only store a cookie if the browser does so.
+          preferences. A websites cookie can only be stored if the browser
+          allows it.
           <br />- A user could configure default options for all new websites.
           If they do this, they will never be interrupted by a cookie alert
           again, and they will know that their chosen privacy settings are being

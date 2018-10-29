@@ -155,7 +155,6 @@ export default class App extends Component {
     return (
       <div className={getClassName('app__outer')}>
         <Helmet {...config.app.head} />
-        <NonCookieBanner />
         <div className={getClassName('app__content')}>
           <div>{children}</div>
         </div>

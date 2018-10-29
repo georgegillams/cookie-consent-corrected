@@ -31,10 +31,12 @@ export default class NonCookieBanner extends Component {
 
     return (
       <div className={classNames.join(' ')} {...rest}>
-        <Section light name="Cookies and privacy">
-          This website does not use cookies - but if it did, we’d probably have
-          a garish alert like this interrupting your browsing experience.
-        </Section>
+        <div className={getClassName('cookie-banner__inner-container')}>
+          <Section light name="Cookies and privacy">
+            This website does not use cookies - but if it did, we’d probably
+            have a garish alert like this interrupting your browsing experience.
+          </Section>
+        </div>
       </div>
     );
   }

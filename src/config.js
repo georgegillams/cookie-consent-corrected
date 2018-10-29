@@ -16,26 +16,34 @@ module.exports = Object.assign(
     apiHost: process.env.APIHOST || 'localhost',
     apiPort: process.env.APIPORT,
     app: {
-      title: 'George Gillams - open-source software engineer',
-      description: 'All the modern best practices in one example.',
+      title: 'Cookie consent - corrected',
+      description: '',
       head: {
-        titleTemplate: 'George Gillams: %s',
+        titleTemplate: 'Cookie consent - corrected: %s',
         meta: [
-          { name: 'description', content: 'My personal website' },
+          {
+            name: 'description',
+            content:
+              'A draft proposal for an improved mechanism for cookie consent on the web.',
+          },
           { charset: 'utf-8' },
-          { property: 'og:site_name', content: 'My personal website' },
+          { property: 'og:site_name', content: '' },
           {
             property: 'og:image',
-            content: 'https://georgegillams.co.uk/favicon.ico',
+            content:
+              'https://cookie-consent-corrected.herokuapp.com/favicon.ico',
           },
           { property: 'og:locale', content: 'en_GB' },
-          { property: 'og:title', content: 'My personal website' },
+          {
+            property: 'og:title',
+            content:
+              'A draft proposal for an improved mechanism for cookie consent on the web.',
+          },
           {
             property: 'og:description',
-            content: 'George Gillams - open-source software engineer',
+            content: 'Cookie consent - corrected',
           },
           { property: 'og:card', content: 'summary' },
-          { property: 'og:site', content: '@georgegillams' },
           { property: 'og:creator', content: '@georgeillams' },
           { property: 'og:image:width', content: '200' },
           { property: 'og:image:height', content: '200' },
