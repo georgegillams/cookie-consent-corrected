@@ -1,0 +1,7 @@
+@import '~bpk-mixins';
+
+.blog-viewer {
+  &__element {
+    display: inline;
+  }
+}

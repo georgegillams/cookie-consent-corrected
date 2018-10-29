@@ -1,0 +1,146 @@
+@import '~bpk-mixins';
+
+.article-card {
+  width: 100%;
+  transition: all 0.4s;
+  border-radius: 0.35rem;
+  box-shadow: 0.1rem 0.1rem 0.3rem 0 rgba(37, 32, 31, 0.3);
+
+  &--narrow-compact {
+    max-width: 25rem;
+  }
+
+  &:focus,
+  &:active,
+  &:hover {
+    box-shadow: 0.2rem 0.2rem 0.5rem 0 rgba(37, 32, 31, 0.3);
+  }
+
+  &__outer-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    &--narrow-compact {
+      justify-content: center;
+    }
+
+    &--auto {
+      @include bpk-breakpoint-mobile {
+        height: 30rem;
+        justify-content: center;
+        align-content: space-around;
+      }
+    }
+  }
+
+  &__inner-container {
+    position: relative;
+    width: 100%;
+    border-radius: 0.35rem;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  &__center-container {
+    display: flex;
+    min-width: 10rem;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+
+    @include bpk-breakpoint-mobile {
+      min-width: 100%;
+      text-align: center;
+    }
+
+    &--narrow-compact {
+      justify-content: center;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 2rem);
+    height: calc(100% + 2rem);
+    margin-top: -1rem;
+    margin-left: -1rem;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.8;
+    background-color: white;
+
+    &--light {
+      background-color: #1e1e1e;
+    }
+  }
+
+  &__image-container {
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    border-radius: 50rem;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 12rem;
+    height: 7rem;
+    margin-top: -0.5rem;
+    margin-left: -3rem;
+  }
+
+  &__banner {
+    width: 0;
+    height: 0.2rem;
+    transition: all 0.4s;
+    background-color: #44aeff;
+
+    &--light {
+      background-color: lightblue;
+    }
+
+    &--hovered {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    align-items: center;
+  }
+
+  &__children {
+    display: flex;
+    grid-area: children;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none !important;
+    text-decoration-color: transparent !important;
+    text-decoration-line: none !important;
+  }
+
+  &__date {
+    width: 6.5rem;
+    grid-area: date;
+    align-items: center;
+    text-align: center;
+
+    &--narrow-compact {
+      display: none;
+    }
+  }
+}

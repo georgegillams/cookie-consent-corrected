@@ -1,0 +1,45 @@
+@import '~bpk-mixins';
+
+.header {
+  &__container {
+    justify-content: space-around;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__inner-container {
+    padding: 2rem 4rem;
+
+    &--wide {
+      padding: 0 0 2rem 0;
+    }
+  }
+
+  &__social {
+    text-align: center;
+  }
+
+  &__logo {
+    text-align: center;
+  }
+
+  &__tech {
+    text-align: center;
+  }
+
+  &__site-map {
+    text-align: center;
+  }
+
+  &__copyright {
+    text-align: center;
+  }
+
+  &__centered {
+    text-align: center;
+  }
+}

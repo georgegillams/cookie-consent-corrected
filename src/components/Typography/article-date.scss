@@ -1,0 +1,12 @@
+@import '~bpk-mixins';
+
+.article-date {
+  &__date {
+    padding-bottom: .5rem;
+    color: $bpk-color-gray-700;
+
+    &--no-padding {
+      padding: 0;
+    }
+  }
+}
