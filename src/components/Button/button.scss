@@ -1,0 +1,133 @@
+@import '~bpk-mixins';
+
+@keyframes example {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button {
+  &__outer {
+    padding: 0.2rem 0.8rem;
+    min-width: 5rem;
+    transition: all 0.3s;
+    border: none;
+    border-radius: 3rem;
+    background-color: #44aeff;
+    background-image: linear-gradient(165deg, #6bc1ff, #44aeff);
+    color: white;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 1rem;
+    text-decoration-color: transparent;
+    text-decoration-line: none;
+
+    &:focus,
+    &:active,
+    &:hover {
+      background-image: linear-gradient(
+        165deg,
+        #87cfff,
+        #44aeff,
+        #87cfff,
+        #44aeff,
+        #87cfff,
+        #44aeff,
+        #87cfff,
+        #44aeff,
+        #87cfff,
+        #44aeff,
+        #87cfff,
+        #44aeff,
+        #87cfff,
+        #44aeff,
+        #87cfff,
+        #44aeff
+      );
+      filter: saturate(2);
+    }
+
+    &--large {
+      padding: 0.6rem 1.2rem;
+      min-width: 7rem;
+    }
+
+    &--destructive {
+      background-color: #a01b1b;
+      background-image: linear-gradient(165deg, #e02626, #c92222);
+
+      &:focus,
+      &:active,
+      &:hover {
+        background-image: linear-gradient(
+          165deg,
+          #ff6565,
+          #e02626,
+          #ff6565,
+          #e02626,
+          #ff6565,
+          #e02626,
+          #ff6565,
+          #e02626,
+          #ff6565,
+          #e02626,
+          #ff6565,
+          #e02626,
+          #ff6565,
+          #e02626,
+          #ff6565,
+          #e02626
+        );
+        filter: saturate(2);
+      }
+    }
+
+    &--disabled {
+      background-color: lightgray;
+      background-image: none;
+
+      &:focus,
+      &:active,
+      &:hover {
+        background-color: lightgray;
+        background-image: none;
+      }
+    }
+
+    &--dark-text {
+      color: #3c4451;
+    }
+
+    &--bouncy {
+      padding: 0.2rem 0.8rem;
+      transition: all 0.2s;
+      background-color: transparent;
+      background-image: none;
+
+      &:focus,
+      &:active,
+      &:hover {
+        animation-name: example;
+        animation-duration: 0.4s;
+        background-color: #44aeff;
+        color: white;
+        fill: white;
+        filter: saturate(1) brightness(1);
+      }
+
+      &--destructive {
+        &:focus,
+        &:active,
+        &:hover {
+          background-color: #e02626;
+          background-image: linear-gradient(165deg, #e02626, #a01b1b);
+        }
+      }
+    }
+  }
+}

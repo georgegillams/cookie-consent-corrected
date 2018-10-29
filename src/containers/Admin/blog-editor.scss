@@ -1,0 +1,29 @@
+@import "~bpk-mixins";
+
+.blog-editor {
+  display: flex;
+  width: 96vw;
+  margin-bottom: 2rem;
+  margin-left: calc(-48vw + 50%);
+  justify-content: space-between;
+  background-color: darkmagenta;
+
+  &__component {
+    min-width: 20rem;
+    padding: 1rem;
+    flex: 1;
+
+    &__editor-element {
+      background-color: hsla(0, 0%, 100%, 0.7);
+    }
+
+    &__editor-element--checkbox {
+      color: white;
+    }
+
+    &__preview-element {
+      background-color: transparent;
+      color: white;
+    }
+  }
+}

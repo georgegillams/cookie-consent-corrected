@@ -1,0 +1,67 @@
+@import '~bpk-mixins';
+
+@fontface {
+  font-family: 'Space Mono', monospace;
+  src: url('https://fonts.googleapis.com/css?family=Space Mono');
+}
+
+.code {
+  &__outer-container {
+    position: relative;
+    // min-height: 15rem;
+    padding: .5rem;
+    border-radius: .4rem;
+    background-color: #1e1d1e;
+    color: $bpk-color-gray-50;
+    font-family: 'Space Mono', monospace;
+    font-size: .7rem;
+    overflow: hidden;
+    // box-shadow: 1rem 1rem 1rem #f3f2f5;
+
+    &--light {
+      padding: .1rem .3rem;
+      border-radius: .2rem;
+      background-color: rgba(173, 174, 178, .2);
+      color: #1e1d1e;
+      font-size: inherit;
+    }
+  }
+
+  &__inner-container {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    // width: 500rem;
+    color: $bpk-color-gray-50;
+    font-family: 'Space Mono', monospace;
+    font-size: .7rem;
+    overflow: scroll;
+    // box-shadow: 1rem 1rem 1rem #f3f2f5;
+
+    &--light {
+      padding: .1rem .3rem;
+      border-radius: .2rem;
+      background-color: $bpk-color-gray-50;
+      color: #1e1d1e;
+    }
+  }
+
+  &__lang {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .25rem .4rem .1rem;
+    border-radius: .2rem;
+    background-color: rgba(243, 242, 245, .25);
+    color: #f3f2f5;
+    font-family: 'Space Mono', monospace;
+    font-size: .7rem;
+    font-style: italic;
+  }
+
+  &__bash-arrow {
+    color: #5c95cd;
+    font-family: 'Space Mono', monospace;
+    font-size: .6rem;
+  }
+}

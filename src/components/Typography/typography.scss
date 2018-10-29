@@ -1,0 +1,136 @@
+@import "~bpk-mixins";
+
+@fontface {
+  font-family: "Quattrocento Sans", sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Quattrocento+Sans");
+}
+
+@fontface {
+  font-family: "Tangerine", cursive;
+  src: url("https://fonts.googleapis.com/css?family=Tangerine");
+}
+
+@fontface {
+  font-family: "Iceland", cursive;
+  src: url("https://fonts.googleapis.com/css?family=Iceland");
+}
+
+.typography {
+  &__main {
+    width: 100%;
+    padding-bottom: 1rem;
+    color: #1e1e1e;
+    // font-family: 'Neuton', serif;
+    font-family: "Quattrocento Sans", sans-serif;
+    text-decoration: none;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 0.65rem;
+    height: 1rem;
+    margin-left: 0.25rem;
+
+    &--inner {
+      position: absolute;
+      max-width: 0.9rem;
+      margin-top: 0.12rem;
+      margin-left: -0.45rem;
+    }
+  }
+
+  &__anchor-link {
+    position: absolute;
+    margin-top: 0.5rem;
+    margin-left: -1.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 0.4;
+
+    @include bpk-breakpoint-tablet {
+      margin-left: 0;
+    }
+
+    &--section {
+      font-size: 2.2rem;
+      line-height: 2.2rem;
+      margin-top: 2.1rem;
+    }
+  }
+
+  &__text {
+    color: #1e1e1e;
+    font-family: "Quattrocento Sans", sans-serif;
+    text-decoration: none;
+
+    &--with-anchor-link {
+      @include bpk-breakpoint-tablet {
+        padding-left: 1.2rem;
+      }
+    }
+
+    &--subsection {
+      padding-top: 0.6rem;
+      padding-bottom: 0.6rem;
+      text-decoration: none;
+    }
+
+    &--section {
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+      font-size: 2.2rem;
+      font-weight: bold;
+      line-height: 2.2rem;
+      text-decoration: none;
+    }
+  }
+
+  &--fancy {
+    font-family: "Tangerine", cursive;
+  }
+
+  &--no-padding {
+    padding: 0;
+  }
+
+  &--hovering {
+    transition: all 0.4s;
+    color: rgb(62, 158, 235) !important;
+    text-decoration: none;
+    fill: rgb(62, 158, 235) !important;
+  }
+
+  &--hovering-light {
+    transition: all 0.4s;
+    color: lightblue !important;
+    text-decoration: none;
+    fill: lightblue !important;
+  }
+
+  &--inline {
+    width: auto;
+  }
+
+  &__link {
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+
+    &--text-link {
+      color: darkorchid;
+      font-weight: normal;
+      fill: darkorchid;
+    }
+
+    &:hover {
+      color: rgb(62, 158, 235);
+      text-decoration: none;
+      fill: rgb(62, 158, 235);
+    }
+  }
+
+  &--light {
+    color: white;
+  }
+}
