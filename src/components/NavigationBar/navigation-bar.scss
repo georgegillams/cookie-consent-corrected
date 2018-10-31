@@ -28,6 +28,16 @@
       }
     }
 
+    &--center {
+      display: none;
+
+      @include bpk-breakpoint-tablet {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
     &--rgt {
       display: none;
 
@@ -67,7 +77,7 @@
 
     &--open {
       @include bpk-breakpoint-tablet {
-        height: 24rem;
+        height: 22rem;
         opacity: 1;
       }
     }
@@ -85,6 +95,7 @@
   &__burger-button {
     display: none;
     height: 0;
+    fill: white;
 
     @include bpk-breakpoint-tablet {
       display: flex;

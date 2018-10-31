@@ -7,6 +7,9 @@ import {
   LoginMagic,
   VerifyEmail,
   Home,
+  Research,
+  TechnicalOverview,
+  Contribute,
   Widgets,
   About,
   Account,
@@ -104,6 +107,11 @@ export default store => {
           status={301}
         />
       ))}
+
+      <Route path="research" component={Research} />
+      <Route path="technical-overview" component={TechnicalOverview} />
+      <Route path="contribute" component={Contribute} />
+      <Route path="site-map" component={SiteMap} />
 
       {/* Catch all route */}
       <Route path="*" component={NotFound} status={404} />

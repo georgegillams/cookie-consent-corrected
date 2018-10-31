@@ -6,10 +6,17 @@
     min-height: 10rem;
     display: flex;
     flex-direction: column;
-    padding: 2rem 4rem;
     background-color: #1e1e1e;
     background-position: center;
     background-size: cover;
+  }
+
+  &__inner-container {
+    padding: 2rem 4rem;
+
+    &--wide {
+      padding: 0 0 2rem 0;
+    }
   }
 
   &__social {

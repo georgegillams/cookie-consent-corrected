@@ -14,6 +14,9 @@ export Design, {
   DesignLab,
 } from './Design';
 export Home from './Home/Home';
+export Research from './Research/Research';
+export TechnicalOverview from './TechnicalOverview/TechnicalOverview';
+export Contribute from './Contribute/Contribute';
 export Account from './Accounts/Account';
 export AccountEdit from './Accounts/AccountEdit';
 export LoginSuccess from './LoginSuccess/LoginSuccess';

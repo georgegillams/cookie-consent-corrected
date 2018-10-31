@@ -56,61 +56,31 @@ class NavigationBar extends Component {
       );
     }
 
-    const menuItems1 = [
+    const menuItems = [
       <NavigationItem
         className={getClassName('navigation-bar__nav-item')}
-        name="Blog"
-        linkUrl="/blog"
+        name="Home"
+        linkUrl="/"
         onClick={this.close}
       />,
       <NavigationItem
         className={getClassName('navigation-bar__nav-item')}
-        name="Travel"
-        linkUrl="/travel"
+        name="Research"
+        linkUrl="/research"
         onClick={this.close}
       />,
       <NavigationItem
         className={getClassName('navigation-bar__nav-item')}
-        name="Photography"
-        linkUrl="/photography"
+        name="Technical"
+        linkUrl="/technical-overview"
         onClick={this.close}
       />,
       <NavigationItem
         className={getClassName('navigation-bar__nav-item')}
-        name="Work"
-        linkUrl="/work"
+        name="Contribute"
+        linkUrl="/contribute"
         onClick={this.close}
       />,
-    ];
-    const accountItem = (
-      <NavigationItem
-        className={getClassName('navigation-bar__nav-item')}
-        name={user ? 'Account' : 'Login'}
-        linkUrl="/account"
-        onClick={this.close}
-      />
-    );
-    const menuItems2 = [
-      <NavigationItem
-        className={getClassName('navigation-bar__nav-item')}
-        name="About"
-        linkUrl="/about"
-        onClick={this.close}
-      />,
-      <NavigationItem
-        className={getClassName('navigation-bar__nav-item')}
-        name="Contact"
-        linkUrl="/contact"
-        onClick={this.close}
-      />,
-      <NavigationItem
-        className={getClassName('navigation-bar__nav-item')}
-        name="Github"
-        linkUrl="https://github.com/georgegillams"
-        hrefExternal
-        onClick={this.close}
-      />,
-      accountItem,
     ];
 
     return (
@@ -118,9 +88,11 @@ class NavigationBar extends Component {
         <ContentWidthRestrictor>
           <div className={getClassName('navigation-bar__bar')} {...rest}>
             <div
-              className={getClassName('navigation-bar__mobile-container--left')}
+              className={getClassName(
+                'navigation-bar__mobile-container--center',
+              )}
             >
-              <Button bouncy onClick={this.toggle}>
+              <Button onClick={this.toggle}>
                 {this.state.isOpen ? (
                   <BpkIconClose style={{ paddingTop: '.3rem' }} />
                 ) : (
@@ -129,31 +101,14 @@ class NavigationBar extends Component {
               </Button>
             </div>
             <div className={getClassName('navigation-bar__desktop-container')}>
-              {menuItems1}
-            </div>
-            <div className={getClassName('navigation-bar__logo-container')}>
-              <Logo
-                className={getClassName('navigation-bar__nav-item')}
-                small
-                noPadding
-                animated
-              />
-            </div>
-            <div className={getClassName('navigation-bar__desktop-container')}>
-              {menuItems2}
-            </div>
-            <div
-              className={getClassName('navigation-bar__mobile-container--rgt')}
-            >
-              {accountItem}
+              {menuItems}
             </div>
           </div>
           <div className={animatedContainerClassNameFinal.join(' ')}>
             <div
               className={getClassName('navigation-bar__mobile-menu-container')}
             >
-              {menuItems1}
-              {menuItems2}
+              {menuItems}
             </div>
           </div>
         </ContentWidthRestrictor>

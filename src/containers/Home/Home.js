@@ -63,7 +63,8 @@ export default class Home extends Component {
 
     return (
       <div className={getClassName('pages__container')}>
-          <Section name="The internet broke…" >
+        <Helmet title="Home" />
+        <Section name="We broke the internet…">
           Cookie consent on the web is a little broken. In the EU, websites that
           wish to use cookies must (by law) obtain consent from users first.
           Browsers leave the website entirely responsible for obtaining this
@@ -82,8 +83,8 @@ export default class Home extends Component {
           </div>
           <br />
           This is an extreme example, and some websites actually take their
-          responsibility very seriously. Many choose not to, however, and getting
-          it right is not always trivial.
+          responsibility very seriously. Many choose not to, however, and
+          getting it right is not always trivial.
           <br />- Creating a compliant cookie “banner” can be expensive -
           especially for charities and non-profits.
           <br />- Cookie “banners” are often disruptive.
@@ -141,7 +142,6 @@ export default class Home extends Component {
           This is especially beneficial to non-profits and small businesses.
         </Section>
         <div className={getClassName('pages__compact-card-container')}>
-          <Helmet title="Home" />
           <ArticleCard
             layout={CARD_LAYOUTS.narrowCompact}
             day={null}

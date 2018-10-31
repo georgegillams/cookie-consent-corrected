@@ -12,7 +12,7 @@ const NavigationItem = props => {
 
   return (
     <div className={outerClassNameFinal.join(' ')}>
-      <Button href={linkUrl} bouncy {...rest}>
+      <Button href={linkUrl} {...rest}>
         {name}
       </Button>
     </div>
@@ -22,13 +22,13 @@ const NavigationItem = props => {
 NavigationItem.propTypes = {
   name: PropTypes.string,
   linkUrl: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 NavigationItem.defaultProps = {
   name: null,
   linkUrl: null,
-  className: null
+  className: null,
 };
 
 export default NavigationItem;
