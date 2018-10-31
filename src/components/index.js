@@ -4,6 +4,7 @@ export BlogsList from './Blogs';
 export Button from './Button';
 export CodeInline, { Code } from './Code';
 export ColourPalleteItem from './Design';
+export Header from './Header';
 export Footer from './Footer';
 export NavigationBar from './NavigationBar';
 export NotificationCentre, { NotificationComp } from './NotificationCentre';

@@ -18,6 +18,7 @@ import {
 import {
   NotificationCentre,
   NavigationBar,
+  Header,
   Footer,
   NonCookieBanner,
 } from 'components';
@@ -155,6 +156,7 @@ export default class App extends Component {
     return (
       <div className={getClassName('app__outer')}>
         <Helmet {...config.app.head} />
+        <Header />
         <div className={getClassName('app__content')}>
           <div>{children}</div>
         </div>
