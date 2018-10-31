@@ -17,7 +17,7 @@ const Footer = props => {
 
   return (
     <footer id="footer" className={outerClassNameFinal.join(' ')} {...rest}>
-      <Section style={{ textAlign: 'center' }} light>
+      <Section noPadding style={{ textAlign: 'center' }} light>
         A draft proposal by George Gillams
       </Section>
     </footer>

@@ -63,10 +63,7 @@ export default class Home extends Component {
 
     return (
       <div className={getClassName('pages__container')}>
-        <div className={getClassName('pages__container--centered')}>
-          <Section name="Cookie consent done right" />
-        </div>
-        <Section>
+          <Section name="The internet broke…" >
           Cookie consent on the web is a little broken. In the EU, websites that
           wish to use cookies must (by law) obtain consent from users first.
           Browsers leave the website entirely responsible for obtaining this
