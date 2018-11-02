@@ -15,12 +15,12 @@
 .button {
   &__outer {
     padding: 0.2rem 0.8rem;
-    min-width: 6rem;
+    min-width: 5rem;
     transition: all 0.3s;
     border: none;
     border-radius: 3rem;
     background-color: #44aeff;
-    background-image: linear-gradient(165deg, #6bc1ff, #44aeff);
+    background-image: linear-gradient(180deg, #6bc1ff, #44aeee);
     color: white;
     font-family: 'Quattrocento Sans', sans-serif;
     font-size: 1rem;
@@ -30,26 +30,7 @@
     &:focus,
     &:active,
     &:hover {
-      background-image: linear-gradient(
-        165deg,
-        #87cfff,
-        #44aeff,
-        #87cfff,
-        #44aeff,
-        #87cfff,
-        #44aeff,
-        #87cfff,
-        #44aeff,
-        #87cfff,
-        #44aeff,
-        #87cfff,
-        #44aeff,
-        #87cfff,
-        #44aeff,
-        #87cfff,
-        #44aeff
-      );
-      filter: saturate(2);
+      filter: saturate(3);
     }
 
     &--large {
@@ -64,26 +45,7 @@
       &:focus,
       &:active,
       &:hover {
-        background-image: linear-gradient(
-          165deg,
-          #ff6565,
-          #e02626,
-          #ff6565,
-          #e02626,
-          #ff6565,
-          #e02626,
-          #ff6565,
-          #e02626,
-          #ff6565,
-          #e02626,
-          #ff6565,
-          #e02626,
-          #ff6565,
-          #e02626,
-          #ff6565,
-          #e02626
-        );
-        filter: saturate(2);
+        filter: saturate(3);
       }
     }
 
@@ -125,7 +87,7 @@
         &:active,
         &:hover {
           background-color: #e02626;
-          background-image: linear-gradient(165deg, #e02626, #a01b1b);
+          background-image: linear-gradient(180deg, #e02626, #a01b1b);
         }
       }
     }

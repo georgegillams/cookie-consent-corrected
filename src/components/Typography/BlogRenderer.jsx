@@ -45,10 +45,9 @@ const BlogRenderer = props => {
 
   const blogSections = content.split('\n# ');
 
-  const references = null;
-  let references2;
+  let references = null;
   try {
-    references2 = blog.bibtex ? bibtexParse.toJSON(blog.blogBibtex) : null;
+    references = blog.bibtex ? bibtexParse.toJSON(blog.bibtex) : null;
   } catch (error) {
     console.log(error);
   }

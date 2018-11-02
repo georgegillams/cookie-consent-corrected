@@ -140,11 +140,11 @@ class BlogPreviewContent extends Component {
       const postFootnoteText = mdFootNote1.join('');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preFootnoteText} />
+          <RecursiveWrapper {...this.props} content={preFootnoteText} />
           <BpkText textStyle="xs">
             <sup>{footnoteNumber}</sup>
           </BpkText>
-          <RecursiveWrapper content={postFootnoteText} />
+          <RecursiveWrapper {...this.props} content={postFootnoteText} />
         </span>
       );
     }
@@ -162,12 +162,12 @@ class BlogPreviewContent extends Component {
       const postFootnoteText = mdFootNote2.join('');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preFootnoteText} />
+          <RecursiveWrapper {...this.props} content={preFootnoteText} />
           <BpkText textStyle="xs">
             <sup>{footnoteNumber}</sup>{' '}
-            {<RecursiveWrapper content={footnoteValue} />}
+            {<RecursiveWrapper {...this.props} content={footnoteValue} />}
           </BpkText>
-          <RecursiveWrapper content={postFootnoteText} />
+          <RecursiveWrapper {...this.props} content={postFootnoteText} />
         </span>
       );
     }
@@ -184,11 +184,11 @@ class BlogPreviewContent extends Component {
       const postQuotationText = mdQuotation.join('');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preQuotationText} />
+          <RecursiveWrapper {...this.props} content={preQuotationText} />
           <Quote className={null /* elementClassNameFinal.join(' ') */}>
-            <RecursiveWrapper content={quotation} />
+            <RecursiveWrapper {...this.props} content={quotation} />
           </Quote>
-          <RecursiveWrapper content={postQuotationText} />
+          <RecursiveWrapper {...this.props} content={postQuotationText} />
         </span>
       );
     }
@@ -206,13 +206,13 @@ class BlogPreviewContent extends Component {
       const postImageText = mdImage.join('');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preImageText} />
+          <RecursiveWrapper {...this.props} content={preImageText} />
           <img
             className={getClassName('pages__image')}
             alt={imageAltText}
             src={imageSrc}
           />
-          <RecursiveWrapper content={postImageText} />
+          <RecursiveWrapper {...this.props} content={postImageText} />
         </span>
       );
     }
@@ -231,7 +231,7 @@ class BlogPreviewContent extends Component {
       const postImageText = mdLazyLoadedImage.join('');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preImageText} />
+          <RecursiveWrapper {...this.props} content={preImageText} />
           <FadingLazyLoadedImage
             className={getClassName('pages__image')}
             altText={imageAltText}
@@ -239,7 +239,7 @@ class BlogPreviewContent extends Component {
             height={aspectY}
             src={imageSrc}
           />
-          <RecursiveWrapper content={postImageText} />
+          <RecursiveWrapper {...this.props} content={postImageText} />
         </span>
       );
     }
@@ -256,14 +256,14 @@ class BlogPreviewContent extends Component {
       const postLinkText = mdYtVideo.join('');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preLinkText} />
+          <RecursiveWrapper {...this.props} content={preLinkText} />
           <YoutubeEmbedVideo
             className={getClassName('pages__image')}
             style={{ maxWidth: '100%', height: '45vw', maxHeight: '23rem' }}
             videoId={videoId}
             suggestions={showSuggestions}
           />
-          <RecursiveWrapper content={postLinkText} />
+          <RecursiveWrapper {...this.props} content={postLinkText} />
         </span>
       );
     }
@@ -282,7 +282,7 @@ class BlogPreviewContent extends Component {
       const external = HelperFunctions.includes(linkRef, '.');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preLinkText} />
+          <RecursiveWrapper {...this.props} content={preLinkText} />
           <a
             className={getClassName('pages__link')}
             href={linkRef}
@@ -296,7 +296,7 @@ class BlogPreviewContent extends Component {
               link
             />
           </a>
-          <RecursiveWrapper content={postLinkText} />
+          <RecursiveWrapper {...this.props} content={postLinkText} />
         </span>
       );
     }
@@ -314,12 +314,12 @@ class BlogPreviewContent extends Component {
       const external = HelperFunctions.includes(linkRef, '.');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preLinkText} />
+          <RecursiveWrapper {...this.props} content={preLinkText} />
           <TextLink external={external} inline href={linkRef}>
-            <RecursiveWrapper content={linkText} />
+            <RecursiveWrapper {...this.props} content={linkText} />
             {external ? ' ' : ''}
           </TextLink>
-          <RecursiveWrapper content={postLinkText} />
+          <RecursiveWrapper {...this.props} content={postLinkText} />
         </span>
       );
     }
@@ -335,15 +335,15 @@ class BlogPreviewContent extends Component {
       const postSsSectionText = mdSubSubSection.join('');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preSsSectionText} />
+          <RecursiveWrapper {...this.props} content={preSsSectionText} />
           <div
             style={{ fontWeight: 'bold' }}
             className={elementClassNameFinal.join(' ')}
           >
-            <RecursiveWrapper content={SsSectionText} />
+            <RecursiveWrapper {...this.props} content={SsSectionText} />
           </div>
           <br />
-          <RecursiveWrapper content={postSsSectionText} />
+          <RecursiveWrapper {...this.props} content={postSsSectionText} />
         </span>
       );
     }
@@ -359,14 +359,14 @@ class BlogPreviewContent extends Component {
       const postBoldText = mdBold.join('');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preBoldText} />
+          <RecursiveWrapper {...this.props} content={preBoldText} />
           <span
             style={{ fontWeight: 'bold' }}
             className={elementClassNameFinal.join(' ')}
           >
-            <RecursiveWrapper content={boldText} />
+            <RecursiveWrapper {...this.props} content={boldText} />
           </span>
-          <RecursiveWrapper content={postBoldText} />
+          <RecursiveWrapper {...this.props} content={postBoldText} />
         </span>
       );
     }
@@ -382,9 +382,17 @@ class BlogPreviewContent extends Component {
       const postCitationText = mdCitation.join('');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preCitationText} />
+          <RecursiveWrapper
+            {...this.props}
+            {...this.props}
+            content={preCitationText}
+          />
           {Cite && <Cite identifier={referenceIdentifier} />}
-          <RecursiveWrapper content={postCitationText} />
+          <RecursiveWrapper
+            {...this.props}
+            {...this.props}
+            content={postCitationText}
+          />
         </span>
       );
     }
@@ -399,7 +407,7 @@ class BlogPreviewContent extends Component {
       const postReferencesText = mdReferencesPrintout.join('');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preReferencesText} />
+          <RecursiveWrapper {...this.props} content={preReferencesText} />
           {Cite && (
             <SubSection
               className={elementClassNameFinal.join(' ')}
@@ -417,7 +425,7 @@ class BlogPreviewContent extends Component {
               />
             </SubSection>
           )}
-          <RecursiveWrapper content={postReferencesText} />
+          <RecursiveWrapper {...this.props} content={postReferencesText} />
         </span>
       );
     }
@@ -433,14 +441,14 @@ class BlogPreviewContent extends Component {
       const postStrikeText = mdStrikethrough.join('');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preStrikeText} />
+          <RecursiveWrapper {...this.props} content={preStrikeText} />
           <span
             style={{ textDecoration: 'line-through' }}
             className={elementClassNameFinal.join(' ')}
           >
-            <RecursiveWrapper content={strikenText} />
+            <RecursiveWrapper {...this.props} content={strikenText} />
           </span>
-          <RecursiveWrapper content={postStrikeText} />
+          <RecursiveWrapper {...this.props} content={postStrikeText} />
         </span>
       );
     }
@@ -458,7 +466,7 @@ class BlogPreviewContent extends Component {
       const postInlineCodeText = mdBlockCode.join('');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preInlineCodeText} />
+          <RecursiveWrapper {...this.props} content={preInlineCodeText} />
           <Code lang={language} githubUrl={githubLink}>
             {blockCode.split('\n\n').map(b => (
               <span>
@@ -473,7 +481,7 @@ class BlogPreviewContent extends Component {
               </span>
             ))}
           </Code>
-          <RecursiveWrapper content={postInlineCodeText} />
+          <RecursiveWrapper {...this.props} content={postInlineCodeText} />
         </span>
       );
     }
@@ -489,11 +497,11 @@ class BlogPreviewContent extends Component {
       const postInlineCodeText = mdInlineCode.join('');
       return (
         <span className={classNameFinal.join(' ')} {...rest}>
-          <RecursiveWrapper content={preInlineCodeText} />
+          <RecursiveWrapper {...this.props} content={preInlineCodeText} />
           <CodeInline className={elementClassNameFinal.join(' ')}>
-            <RecursiveWrapper content={inlineCode} />
+            <RecursiveWrapper {...this.props} content={inlineCode} />
           </CodeInline>
-          <RecursiveWrapper content={postInlineCodeText} />
+          <RecursiveWrapper {...this.props} content={postInlineCodeText} />
         </span>
       );
     }

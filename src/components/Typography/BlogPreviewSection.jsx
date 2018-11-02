@@ -78,7 +78,7 @@ BlogPreviewSection.propTypes = {
   className: PropTypes.string,
   elementClassName: PropTypes.string,
   light: PropTypes.bool,
-  noAnchor: PropTypes.bool
+  noAnchor: PropTypes.bool,
 };
 
 BlogPreviewSection.defaultProps = {
@@ -86,7 +86,7 @@ BlogPreviewSection.defaultProps = {
   className: null,
   elementClassName: null,
   light: false,
-  noAnchor: false
+  noAnchor: false,
 };
 
 export default BlogPreviewSection;
