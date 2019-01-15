@@ -1,1 +1,0 @@
-SITEMAP: https://cookie-consent-corrected.herokuapp.com/sitemap.xml

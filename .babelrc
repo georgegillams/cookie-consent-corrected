@@ -1,24 +1,31 @@
 {
-  "presets": ["react", "es2015", "stage-0"],
-
-  "plugins": [
-    "transform-runtime",
-    "add-module-exports",
-    "transform-decorators-legacy",
-    "transform-react-display-name"
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "react",
+    "es2015",
+    "stage-0",
   ],
   "env": {
-    "development": {
+    "production": {
+      "only": ["app"],
       "plugins": [
-        "typecheck",
-        ["react-transform", {
-            "transforms": [{
-                "transform": "react-transform-catch-errors",
-                "imports": ["react", "redbox-react"]
-              }
-            ]
-        }]
+        "transform-react-remove-prop-types",
+        "transform-react-constant-elements",
+        "transform-react-inline-elements",
+        "transform-runtime",
+        "add-module-exports",
+        "transform-decorators-legacy",
+        "transform-react-display-name",
+        "transform-class-properties"
       ]
+    },
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs", "dynamic-import-node"]
     }
   }
 }

@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Quattrocento Sans", sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Quattrocento+Sans");
+}
+
+body.fontLoaded {
+  font-family: "Quattrocento Sans", sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Quattrocento+Sans");
+}
+
+#app {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+p,
+label {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  line-height: 1.5em;
+}

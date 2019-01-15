@@ -1,8 +1,18 @@
-.idea/
-node_modules/
-dist/
-*.iml
-webpack-assets.json
-webpack-stats.json
+# Don't check auto-generated stuff into git
+coverage
+node_modules
+stats.json
+
+# Cruft
+.DS_Store
 npm-debug.log
-*.swp
+.idea
+
+# Logs
+yarn-error.log
+
+# built stuff
+build
+helpers/helpers
+app/helpers
+server/api/helpers

@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const { execSync } = require('child_process');
+
 const TRANSPILED_POSTFIX = '_TRANSPILED';
 const blacklistedIdStatements_TWO = ['var Props = exports.Props'];
 const blacklistedIdStatements_THREE = [
@@ -12,7 +13,7 @@ const blacklistedIdStatements_THREE = [
   'instanceof window)) {',
 ];
 const blacklistedIdStatements_RETURN_TRUE = [
-  `return input != null && input.children instanceof Node && typeof input.alternate === 'boolean' && (input.className == null || typeof input.className === 'string');`,
+  "return input != null && input.children instanceof Node && typeof input.alternate === 'boolean' && (input.className == null || typeof input.className === 'string');",
 ];
 
 const removeBlacklistedIfStatements = srcPath => {
@@ -26,7 +27,7 @@ const removeBlacklistedIfStatements = srcPath => {
     blacklistedIdStatements_RETURN_TRUE.forEach(bt => {
       if (ln.includes(bt)) {
         lineExcludeCount = 1;
-        res += `return true;\n`;
+        res += 'return true;\n';
       }
     });
     blacklistedIdStatements_THREE.forEach(bt => {
@@ -47,7 +48,7 @@ const removeBlacklistedIfStatements = srcPath => {
 const transpileDirToSelf = dir => {
   console.log(`working on ${dir}`);
   if (!fs.existsSync(`${dir}${TRANSPILED_POSTFIX}`)) {
-    console.log(`NEEDS TRANSPILING`);
+    console.log('NEEDS TRANSPILING');
     if (fs.existsSync(`./${dir}/stories.js`)) {
       execSync(`rm ./${dir}/stories.js`);
     }
