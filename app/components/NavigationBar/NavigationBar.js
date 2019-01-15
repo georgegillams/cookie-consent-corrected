@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import BpkIconClose from 'bpk-component-icon/lg/close';
 import BpkIconMenu from 'bpk-component-icon/lg/menu';
-import BpkBreakpoint, { BREAKPOINTS } from 'bpk-component-breakpoint';
 import { Logo, Button, ContentWidthRestrictor } from '../';
 import NavigationItem from './NavigationItem';
 import { cssModules } from 'bpk-react-utils';

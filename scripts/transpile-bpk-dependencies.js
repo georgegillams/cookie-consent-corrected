@@ -53,7 +53,7 @@ const transpileDirToSelf = dir => {
       execSync(`rm ./${dir}/stories.js`);
     }
     execSync(
-      `npx babel-cli --plugins transform-flow-strip-types ${dir} --out-dir ${dir}${TRANSPILED_POSTFIX}`,
+      `NODE_ENV=development npx babel-cli --plugins transform-flow-strip-types ${dir} --out-dir ${dir}${TRANSPILED_POSTFIX}`,
     );
     let transpiledSrcFiles = execSync(
       `find . -path "./${dir}${TRANSPILED_POSTFIX}/*.js"`,
