@@ -1,5 +1,7 @@
 # [https://cookie-consent-corrected.herokuapp.com/](https://cookie-consent-corrected.herokuapp.com/)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/georgegillams/cookie-consent-corrected.svg)](https://greenkeeper.io/)
+
 This is the code for the website only. Other repos will be created for the proposal itself and any proof-of-concept tooling we build!
 
 This project uses React with Server-side rendering (SSR). We may hook it up with a database and Redux at some point 🤷‍♀️.
