@@ -49,7 +49,7 @@
     "bpk-component-image": "^2.0.61",
     "bpk-component-input": "^3.3.43",
     "bpk-component-label": "^3.2.91",
-    "bpk-component-progress": "^1.0.91",
+    "bpk-component-progress": "^1.1.2",
     "bpk-component-text": "^1.0.87",
     "bpk-component-textarea": "^1.0.85",
     "bpk-mixins": "^17.11.18",
