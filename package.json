@@ -44,7 +44,7 @@
     "bcrypt": "^3.0.2",
     "bibtex-parse-js": "0.0.24",
     "bpk-component-checkbox": "^1.4.52",
-    "bpk-component-code": "^1.1.27",
+    "bpk-component-code": "^1.2.2",
     "bpk-component-icon": "^3.23.7",
     "bpk-component-image": "^2.0.61",
     "bpk-component-input": "^3.3.43",
